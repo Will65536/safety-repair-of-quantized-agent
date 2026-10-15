@@ -1,0 +1,29 @@
+id: llama3_8b_instruct_spinquant_w4a4kv4
+family: llama3
+loader: spinquant_saved_state
+artifact_format: spinquant_qmodel_state
+
+model_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/bf16
+tokenizer_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/bf16
+revision: null
+local_files_only: true
+base_model: llama3_8b_instruct_bf16
+quantization_method: spinquant
+
+precision:
+  weights: 4
+  activations: 4
+  kv_cache: 4
+
+spinquant:
+  rotation_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/spinquant-w4a4kv4/R.bin
+  quantized_state_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/spinquant-w4a4kv4/qmodel.pt
+  # qmodel.pt is a complete strict state dict. Construct the runtime wrappers,
+  # but skip weight transforms that would be overwritten during state loading.
+  skip_overwritten_preload_transforms: true
+  a_groupsize: -1
+  a_asym: true
+  k_groupsize: 128
+  k_asym: true
+  v_groupsize: 128
+  v_asym: true

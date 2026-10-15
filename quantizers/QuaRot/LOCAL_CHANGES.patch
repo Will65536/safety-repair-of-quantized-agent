@@ -1,0 +1,133 @@
+diff --git a/fake_quant/eval_utils.py b/fake_quant/eval_utils.py
+index fc3561b..3579f3a 100644
+--- a/fake_quant/eval_utils.py
++++ b/fake_quant/eval_utils.py
+@@ -4,6 +4,7 @@ import quant_utils
+ import torch
+ import os
+ import logging
++import json
+ from tqdm import tqdm
+ 
+ 
+@@ -12,10 +13,12 @@ def evaluator(model, testenc, dev, args):
+ 
+     model.eval()
+ 
+-    if 'opt' in args.model:
++    # Local checkpoint directory names need not contain a Hugging Face namespace.
++    model_type = model_utils.get_model_type(model)
++    if model_type == model_utils.OPT_MODEL:
+         opt_type = True
+         llama_type = False
+-    elif 'meta' in args.model:
++    elif model_type == model_utils.LLAMA_MODEL:
+         llama_type = True
+         opt_type = False
+     else:
+@@ -37,6 +40,9 @@ def evaluator(model, testenc, dev, args):
+     elif llama_type:
+         layers = model.model.layers
+         model.model.embed_tokens = model.model.embed_tokens.to(dev)
++        # Shared RoPE lives outside decoder layers in Transformers 4.44.
++        if hasattr(model.model, 'rotary_emb'):
++            model.model.rotary_emb = model.model.rotary_emb.to(dev)
+ 
+     layers[0] = layers[0].to(dev)
+ 
+@@ -87,6 +93,8 @@ def evaluator(model, testenc, dev, args):
+             model.model.decoder.project_in = model.model.decoder.project_in.cpu()
+     elif llama_type:
+         model.model.embed_tokens = model.model.embed_tokens.cpu()
++        if hasattr(model.model, 'rotary_emb'):
++            model.model.rotary_emb = model.model.rotary_emb.cpu()
+         position_ids = cache['position_ids']
+ 
+     torch.cuda.empty_cache()
+@@ -147,4 +155,14 @@ def evaluator(model, testenc, dev, args):
+     ppl = torch.exp(nlls_tensor.mean())
+     model.config.use_cache = use_cache
+     logging.info(f'\n{args.eval_dataset.upper()} PPL: {ppl.item():.3f}')
++    # Persist native results without changing loss aggregation or model behavior.
++    if args.save_qmodel_path:
++        output_dir = os.path.dirname(os.path.abspath(args.save_qmodel_path))
++        torch.save({'sequence_mean_nll': nlls_tensor.detach().cpu(),
++                    'seqlen': model.seqlen, 'dataset': args.eval_dataset},
++                   os.path.join(output_dir, 'ppl_per_sequence.pt'))
++        with open(os.path.join(output_dir, 'ppl_metrics.json'), 'w') as handle:
++            json.dump({'dataset': args.eval_dataset, 'split': 'test',
++                       'perplexity': ppl.item(), 'seqlen': model.seqlen,
++                       'sequences': len(nlls_tensor), 'batch_size': batch_size}, handle, indent=2)
+     return ppl.item()
+diff --git a/fake_quant/gptq_utils.py b/fake_quant/gptq_utils.py
+index bb7d1f0..bbbd713 100644
+--- a/fake_quant/gptq_utils.py
++++ b/fake_quant/gptq_utils.py
+@@ -150,6 +150,9 @@ def gptq_fwrd(model, dataloader, dev, args):
+ 
+     model.model.embed_tokens = model.model.embed_tokens.to(dev)
+     model.model.norm = model.model.norm.to(dev)
++    # Shared RoPE lives outside decoder layers in Transformers 4.44.
++    if hasattr(model.model, 'rotary_emb'):
++        model.model.rotary_emb = model.model.rotary_emb.to(dev)
+     layers[0] = layers[0].to(dev)
+ 
+     dtype = next(iter(model.parameters())).dtype
+@@ -179,6 +182,8 @@ def gptq_fwrd(model, dataloader, dev, args):
+     layers[0] = layers[0].cpu()
+     model.model.embed_tokens = model.model.embed_tokens.cpu()
+     model.model.norm = model.model.norm.cpu()
++    if hasattr(model.model, 'rotary_emb'):
++        model.model.rotary_emb = model.model.rotary_emb.cpu()
+     torch.cuda.empty_cache()
+ 
+     outs = torch.zeros_like(inps)
+diff --git a/fake_quant/utils.py b/fake_quant/utils.py
+index a31a067..eba71b4 100644
+--- a/fake_quant/utils.py
++++ b/fake_quant/utils.py
+@@ -16,6 +16,7 @@ supported_models = [
+             'meta-llama/Llama-2-13b-hf',
+             'meta-llama/Llama-2-70b-hf',
+             'meta-llama/Meta-Llama-3-8B',
++            'meta-llama/Meta-Llama-3-8B-Instruct',
+             'meta-llama/Meta-Llama-3-70B',
+             'facebook/opt-125m'
+             ]
+@@ -73,7 +74,7 @@ def parser_gen():
+ 
+     # General Arguments
+     parser.add_argument('--model', type=str, default='meta-llama/Llama-2-7b-hf',
+-                        help='Model to load;', choices=supported_models)
++                        help='Supported Hugging Face model ID or local checkpoint directory')
+     parser.add_argument('--seed', type=int, default=0, help='Random Seed for HuggingFace and PyTorch')
+     parser.add_argument('--eval_dataset', type=str, default='wikitext2',
+                         help='Dataset for Evaluation (default: wikitext2)', choices=supported_datasets,)
+@@ -188,6 +189,8 @@ def parser_gen():
+     )
+ 
+     args = parser.parse_args()
++    if args.model not in supported_models and not os.path.isdir(args.model):
++        parser.error('--model must be a supported model ID or an existing local directory')
+     if args.lm_eval:
+         from lm_eval import tasks
+         from lm_eval import utils as lm_eval_utils
+@@ -200,8 +203,10 @@ def parser_gen():
+     # quant_type = f'w{args.w_bits}a{args.a_bits}_{args.rotate_mode}'
+     if args.save_name is None:
+         args.save_name = datetime.now().strftime("%Y%m%d_%H%M%S")
++    # An absolute model path must not redirect logs into immutable input weights.
++    model_log_name = os.path.basename(os.path.normpath(args.model)) if os.path.isdir(args.model) else args.model
+     setattr(args, 'save_path',
+-            os.path.join(os.path.dirname(os.path.abspath(__file__)), 'experiments', args.model, args.save_name))
++            os.path.join(os.path.dirname(os.path.abspath(__file__)), 'experiments', model_log_name, args.save_name))
+     os.makedirs(args.save_path, exist_ok=True)
+ 
+     config_logging(os.path.join(args.save_path, f'{args.save_name}.log'))
+@@ -269,4 +274,4 @@ def distribute_model(model) -> None:
+         state_dict=model.state_dict(),
+     )
+ 
+-    cleanup_memory()
+\ No newline at end of file
++    cleanup_memory()

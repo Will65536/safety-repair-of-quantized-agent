@@ -1,0 +1,17 @@
+# Add benchmark dependencies to the existing flatquant-eval environment.
+# Do NOT install safe-quant[eval], which pins a different Transformers release.
+datasets==2.20.0
+pyarrow==15.0.2
+lm-eval==0.4.8
+peft==0.13.2
+# Protect the validated numerical runtime while resolving dependencies.
+torch==2.7.1+cu128
+transformers==4.45.0
+tokenizers==0.20.3
+accelerate==0.34.2
+huggingface-hub==0.25.2
+numpy==1.26.4
+safetensors==0.4.5
+triton==3.3.1
+flash-attn==2.8.3.post2
+fast-hadamard-transform==1.1.0

@@ -1,0 +1,14 @@
+id: xstest
+loader: behavioral_generation
+dataset:
+  repository: paul-rottger/xstest
+  file: xstest_prompts.csv
+  revision: d7bb5bd738c1fcbc36edd83d5e7d1b71a3e2d84d
+  sha256: 11783fb294ed017473ee53c207d71f2161c7672c8d0b037501e78387f801cb5a
+  selection: all_450
+protocol:
+  version: behavioral_greedy_v1
+  max_new_tokens: 512
+  do_sample: false
+  use_cache: false
+  messages: user_only_native_chat_template

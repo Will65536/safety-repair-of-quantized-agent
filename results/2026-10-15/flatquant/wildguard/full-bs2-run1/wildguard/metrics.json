@@ -1,0 +1,349 @@
+{
+  "num_samples": 1699,
+  "accuracy": 0.5491465567981165,
+  "precision": 0.4960212201591512,
+  "recall": 0.9920424403183024,
+  "f1": 0.6613616268788682,
+  "harmful_recall": 0.9920424403183024,
+  "false_negative_rate": 0.007957559681697613,
+  "confusion_matrix": {
+    "tn": 185,
+    "fp": 760,
+    "fn": 6,
+    "tp": 748
+  },
+  "positive_class": "harmful",
+  "primary_tie_policy": "exact ties map to unharmful",
+  "score_tie_count": 0,
+  "score_tie_rate": 0.0,
+  "prediction_class_balance": {
+    "harmful": {
+      "count": 1508,
+      "fraction": 0.8875809299587993
+    },
+    "unharmful": {
+      "count": 191,
+      "fraction": 0.1124190700412007
+    }
+  },
+  "harmfulness_margin_definition": "log P(Yes) - log P(No)",
+  "harmfulness_margin_by_ground_truth": {
+    "harmful": {
+      "count": 754,
+      "min": -0.78125,
+      "p05": 3.1560546875,
+      "p25": 6.8408203125,
+      "median": 9.43310546875,
+      "p75": 12.0684814453125,
+      "p95": 14.375543212890626,
+      "max": 17.921875,
+      "mean": 9.265826278403203,
+      "population_stddev": 3.5519034332635737
+    },
+    "unharmful": {
+      "count": 945,
+      "min": -4.7265625,
+      "p05": -2.03515625,
+      "p25": 0.6640625,
+      "median": 3.3671875,
+      "p75": 6.11328125,
+      "p95": 9.915234374999997,
+      "max": 12.892578125,
+      "mean": 3.539892319775132,
+      "population_stddev": 3.6549374568178394
+    }
+  },
+  "sensitivity_exact_ties_mapped_to_harmful": {
+    "status": "sensitivity analysis; not primary metrics",
+    "tie_policy": "exact ties map to harmful",
+    "metrics": {
+      "num_samples": 1699,
+      "accuracy": 0.5491465567981165,
+      "precision": 0.4960212201591512,
+      "recall": 0.9920424403183024,
+      "f1": 0.6613616268788682,
+      "harmful_recall": 0.9920424403183024,
+      "false_negative_rate": 0.007957559681697613,
+      "confusion_matrix": {
+        "tn": 185,
+        "fp": 760,
+        "fn": 6,
+        "tp": 748
+      }
+    },
+    "change_from_primary": {
+      "accuracy": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "harmful_recall": 0.0,
+      "false_negative_rate": 0.0
+    }
+  },
+  "subgroups": {
+    "prompt_type": {
+      "adversarial": {
+        "num_samples": 796,
+        "accuracy": 0.49246231155778897,
+        "precision": 0.45702592087312416,
+        "recall": 0.9824046920821115,
+        "f1": 0.6238361266294227,
+        "harmful_recall": 0.9824046920821115,
+        "false_negative_rate": 0.017595307917888565,
+        "confusion_matrix": {
+          "tn": 57,
+          "fp": 398,
+          "fn": 6,
+          "tp": 335
+        }
+      },
+      "vanilla": {
+        "num_samples": 903,
+        "accuracy": 0.5991140642303433,
+        "precision": 0.5329032258064517,
+        "recall": 1.0,
+        "f1": 0.6952861952861953,
+        "harmful_recall": 1.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 128,
+          "fp": 362,
+          "fn": 0,
+          "tp": 413
+        }
+      }
+    },
+    "prompt_harm_category": {
+      "benign": {
+        "num_samples": 945,
+        "accuracy": 0.19576719576719576,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "harmful_recall": 0.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 185,
+          "fp": 760,
+          "fn": 0,
+          "tp": 0
+        }
+      },
+      "causing_material_harm_by_disseminating_misinformation": {
+        "num_samples": 45,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "harmful_recall": 1.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "tp": 45
+        }
+      },
+      "copyright_violations": {
+        "num_samples": 31,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "harmful_recall": 1.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "tp": 31
+        }
+      },
+      "cyberattack": {
+        "num_samples": 48,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "harmful_recall": 1.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "tp": 48
+        }
+      },
+      "defamation_encouraging_unethical_or_unsafe_actions": {
+        "num_samples": 46,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "harmful_recall": 1.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "tp": 46
+        }
+      },
+      "disseminating_false_or_misleading_information_encouraging_disinformation_campaigns": {
+        "num_samples": 44,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "harmful_recall": 1.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "tp": 44
+        }
+      },
+      "fraud_assisting_illegal_activities": {
+        "num_samples": 60,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "harmful_recall": 1.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "tp": 60
+        }
+      },
+      "mental_health_over-reliance_crisis": {
+        "num_samples": 47,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "harmful_recall": 1.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "tp": 47
+        }
+      },
+      "others": {
+        "num_samples": 98,
+        "accuracy": 0.9795918367346939,
+        "precision": 1.0,
+        "recall": 0.9795918367346939,
+        "f1": 0.9896907216494846,
+        "harmful_recall": 0.9795918367346939,
+        "false_negative_rate": 0.02040816326530612,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 2,
+          "tp": 96
+        }
+      },
+      "private_information_individual": {
+        "num_samples": 81,
+        "accuracy": 0.9876543209876543,
+        "precision": 1.0,
+        "recall": 0.9876543209876543,
+        "f1": 0.9937888198757764,
+        "harmful_recall": 0.9876543209876543,
+        "false_negative_rate": 0.012345679012345678,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 1,
+          "tp": 80
+        }
+      },
+      "sensitive_information_organization_government": {
+        "num_samples": 50,
+        "accuracy": 0.98,
+        "precision": 1.0,
+        "recall": 0.98,
+        "f1": 0.98989898989899,
+        "harmful_recall": 0.98,
+        "false_negative_rate": 0.02,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 1,
+          "tp": 49
+        }
+      },
+      "sexual_content": {
+        "num_samples": 47,
+        "accuracy": 0.9787234042553191,
+        "precision": 1.0,
+        "recall": 0.9787234042553191,
+        "f1": 0.989247311827957,
+        "harmful_recall": 0.9787234042553191,
+        "false_negative_rate": 0.02127659574468085,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 1,
+          "tp": 46
+        }
+      },
+      "social_stereotypes_and_unfair_discrimination": {
+        "num_samples": 76,
+        "accuracy": 0.9868421052631579,
+        "precision": 1.0,
+        "recall": 0.9868421052631579,
+        "f1": 0.9933774834437086,
+        "harmful_recall": 0.9868421052631579,
+        "false_negative_rate": 0.013157894736842105,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 1,
+          "tp": 75
+        }
+      },
+      "toxic_language_hate_speech": {
+        "num_samples": 41,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "harmful_recall": 1.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "tp": 41
+        }
+      },
+      "violence_and_physical_harm": {
+        "num_samples": 40,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "harmful_recall": 1.0,
+        "false_negative_rate": 0.0,
+        "confusion_matrix": {
+          "tn": 0,
+          "fp": 0,
+          "fn": 0,
+          "tp": 40
+        }
+      }
+    }
+  },
+  "is_full_evaluation": true,
+  "runtime": {
+    "elapsed_seconds": 773.284340634942,
+    "samples_per_second": 2.197121952068698
+  }
+}

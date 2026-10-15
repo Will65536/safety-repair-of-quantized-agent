@@ -1,0 +1,53 @@
+{
+  "condition": "QuaRot W4A4KV4",
+  "base_model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "checkpoint_bytes_unchanged": true,
+  "artifact_format": "quarot_qmodel_state",
+  "code_repository": "https://github.com/Will65536/safety-repair-of-quantized-agent",
+  "files": {
+    "calibration_manifest.json": {
+      "bytes": 11455,
+      "sha256": "9d0375856883e0793928d4070b12da028c121396d76f2648e2bf3273166cc906"
+    },
+    "config.json": {
+      "bytes": 654,
+      "sha256": "61f3de03a16ca8046b05dc777bce72717022bc8522152eee61a69072272ef54b"
+    },
+    "ppl_metrics.json": {
+      "bytes": 140,
+      "sha256": "b3bf9098cf1fe76000e0911e32601b8f31bc3677f58f85c8cf4794075bfddf73"
+    },
+    "ppl_per_sequence.pt": {
+      "bytes": 1801,
+      "sha256": "03042a0a29aa3e8292a930b6011ce5d51f76a08de71325138e7ed33c7de24b9e"
+    },
+    "qmodel.pt": {
+      "bytes": 16072004244,
+      "sha256": "fa0c5ce028544bed329941ef91f44b586a7bf0ad6ad003313055a7f27808cd42"
+    },
+    "requirements.lock.txt": {
+      "bytes": 5261,
+      "sha256": "6bdcd614ac28d527b1649b82060a51cb253d64c1e183d8ed74e296cfb58122c8"
+    },
+    "run_manifest.json": {
+      "bytes": 4433,
+      "sha256": "c66374da6315c428a84d587d12e4313e45895591ebe127a180b5743bb24bb5a5"
+    },
+    "source_changes.patch": {
+      "bytes": 5944,
+      "sha256": "0412cd29f7afbaa59648f507ca14ab4aa2643a0ea1d2b165092ff7d0a36e82cc"
+    },
+    "special_tokens_map.json": {
+      "bytes": 73,
+      "sha256": "462d91939dbc37178aa5a3eae7068d1990ccc92e09f288cc71f42cdf139d69cc"
+    },
+    "tokenizer.json": {
+      "bytes": 9085698,
+      "sha256": "e134af98b985517b4f068e3755ae90d4e9cd2d45d328325dc503f1c6b2d06cc7"
+    },
+    "tokenizer_config.json": {
+      "bytes": 50977,
+      "sha256": "da0e3a7cce6e4d787e85eb1c24d548420e0d7fe2c7a214e192795c46e40d75bb"
+    }
+  }
+}

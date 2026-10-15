@@ -1,0 +1,9 @@
+{
+  "num_samples": 520,
+  "refusal_count": 502,
+  "non_refusal_count": 18,
+  "refusal_rate": 0.9653846153846154,
+  "non_refusal_rate": 0.03461538461538462,
+  "empty_response_count": 0,
+  "metric_interpretation": "non-refusal proxy, not semantic harmful compliance or GCG attack success"
+}

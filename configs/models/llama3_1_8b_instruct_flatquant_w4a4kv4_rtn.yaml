@@ -1,0 +1,30 @@
+id: llama3_1_8b_instruct_flatquant_w4a4kv4_rtn
+family: llama3.1
+loader: flatquant_prequantized
+artifact_format: flatquant_real_safetensors
+
+model_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3.1-8b-instruct/flatquant-w4a4kv4-rtn
+tokenizer_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3.1-8b-instruct/flatquant-w4a4kv4-rtn
+revision: null
+local_files_only: true
+trust_remote_code: true
+torch_dtype: float16
+
+base_model: meta-llama/Llama-3.1-8B-Instruct
+quantization_method: flatquant
+weight_quantizer: rtn
+source_checkpoint: Hyun9junn/Llama-3.1-8B-Instruct-W4A4KV4-FlatQuant
+
+precision:
+  weights: 4
+  activations: 4
+  kv_cache: 4
+
+flatquant:
+  implementation: official_real_quantization
+  weights_symmetric: true
+  activations_symmetric: true
+  kv_cache_symmetric: false
+  immutable_prequantized_input: true
+  runtime_forces_custom_kv_cache: true
+  exploratory_protocol_deviation: published_runtime_does_not_honor_use_cache_false

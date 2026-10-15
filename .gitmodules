@@ -1,0 +1,18 @@
+[submodule "quantizers/QuaRot/third-party/cutlass"]
+	path = quantizers/QuaRot/third-party/cutlass
+	url = https://github.com/NVIDIA/cutlass.git
+[submodule "quantizers/QuaRot/third-party/fast-hadamard-transform"]
+	path = quantizers/QuaRot/third-party/fast-hadamard-transform
+	url = https://github.com/Dao-AILab/fast-hadamard-transform.git
+[submodule "quantizers/QuaRot/third-party/nvbench"]
+	path = quantizers/QuaRot/third-party/nvbench
+	url = https://github.com/NVIDIA/nvbench
+[submodule "quantizers/FlatQuant/third-party/cutlass"]
+	path = quantizers/FlatQuant/third-party/cutlass
+	url = https://github.com/NVIDIA/cutlass.git
+[submodule "quantizers/FlatQuant/third-party/fast-hadamard-transform"]
+	path = quantizers/FlatQuant/third-party/fast-hadamard-transform
+	url = https://github.com/Dao-AILab/fast-hadamard-transform.git
+[submodule "quantizers/FlatQuant/third-party/nvbench"]
+	path = quantizers/FlatQuant/third-party/nvbench
+	url = https://github.com/NVIDIA/nvbench

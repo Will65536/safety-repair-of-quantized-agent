@@ -1,0 +1,42 @@
+{
+  "tasks": {
+    "arc_easy": {
+      "accuracy": 0.7929292929292929,
+      "num_samples": {
+        "original": 2376,
+        "effective": 2376
+      },
+      "accuracy_normalized_diagnostic": 0.7680976430976431
+    },
+    "arc_challenge": {
+      "accuracy": 0.45307167235494883,
+      "num_samples": {
+        "original": 1172,
+        "effective": 1172
+      },
+      "accuracy_normalized_diagnostic": 0.4854948805460751
+    },
+    "piqa": {
+      "accuracy": 0.7676822633297062,
+      "num_samples": {
+        "original": 1838,
+        "effective": 1838
+      },
+      "accuracy_normalized_diagnostic": 0.7682263329706203
+    },
+    "winogrande": {
+      "accuracy": 0.6827150749802684,
+      "num_samples": {
+        "original": 1267,
+        "effective": 1267
+      }
+    }
+  },
+  "general_4task_avg": 0.6740995758985542,
+  "average_definition": "unweighted arithmetic mean of four acc values",
+  "is_full_evaluation": true,
+  "limit_per_task": null,
+  "runtime": {
+    "elapsed_seconds": 611.3316617321689
+  }
+}

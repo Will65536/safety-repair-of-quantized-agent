@@ -1,0 +1,15 @@
+id: llama3_8b_instruct_bf16
+family: llama3
+loader: transformers
+
+model_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/bf16
+tokenizer_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/bf16
+revision: null
+local_files_only: true
+torch_dtype: bfloat16
+attention_implementation: sdpa
+
+precision:
+  weights: bf16
+  activations: bf16
+  kv_cache: bf16

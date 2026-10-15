@@ -1,0 +1,17 @@
+id: harmbench_directrequest
+loader: behavioral_generation
+dataset:
+  repository: centerforaisafety/HarmBench
+  file: data/behavior_datasets/harmbench_behaviors_text_test.csv
+  revision: 8e1604d1171fe8a48d8febecd22f600e462bdcdd
+  sha256: 75d257b3e7428c52eb7b0154318f455af3e01b09a3794b5e2f3d36054f3c0e29
+  expected_selected_rows: 159
+  split: text_test
+  selection: standard
+  method: DirectRequest
+protocol:
+  version: behavioral_greedy_cached_128_smoke_v1
+  max_new_tokens: 128
+  do_sample: false
+  use_cache: true
+  messages: user_only_native_chat_template

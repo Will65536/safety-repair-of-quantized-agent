@@ -1,0 +1,17 @@
+id: finguard
+loader: finguard
+dataset:
+  path: nandhak12/finguard-finance-injection-dataset
+  revision: a836b12ca4d8aeb88e9d5fc65c7f43f816b23565
+  split: test
+  fields:
+    id: id
+    text: user_message
+    label: label
+    metadata: [category, agent_type, source]
+protocol:
+  version: finguard_ab_cached_v1
+  max_length: 1024
+  safe_candidate: A
+  attack_candidate: B
+  use_cache: true

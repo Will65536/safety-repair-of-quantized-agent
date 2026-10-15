@@ -1,0 +1,22 @@
+id: llama3_8b_instruct_flatquant_w4a4kv4
+family: llama3
+loader: flatquant_prequantized
+artifact_format: flatquant_real_safetensors
+model_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/flatquant-w4a4kv4
+tokenizer_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/bf16
+generation_config_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/bf16/generation_config.json
+local_files_only: true
+trust_remote_code: true
+torch_dtype: float16
+attention_implementation: flash_attention_2
+precision: {weights: 4, activations: 4, kv_cache: 4}
+flatquant:
+  source_model: Hyun9junn/Meta-Llama-3-8B-Instruct-W4A4KV4-FlatQuant
+  checkpoint_revision: 65380056097d262d882e427359c9c8be2d63abf7
+  checkpoint_manifest: /work/nvme/bgxm/wliu12/repos/FlatQuant/local_setup/checkpoint_manifest.json
+  runtime_support: /work/nvme/bgxm/wliu12/repos/FlatQuant/local_setup/runtime_support.py
+  nonpacked_precision: FP16_published_runtime_not_BF16
+  runtime_forces_custom_kv_cache: true
+  use_cache_false_policy: reject
+  prefill_attention: published_unquantized_QK_path
+  matched_evaluation_compatibility: not_yet_validated

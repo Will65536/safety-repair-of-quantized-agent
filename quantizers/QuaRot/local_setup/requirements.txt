@@ -1,0 +1,20 @@
+# QuaRot research environment for local Llama-3-8B-Instruct compatibility.
+# Isolated from OSTQuant; do not install this into the other environments.
+torch==2.2.1
+numpy==1.26.4
+scipy==1.10.1
+transformers==4.44.2
+tokenizers==0.19.1
+accelerate==0.34.2
+datasets==2.20.0
+pyarrow==15.0.2
+huggingface-hub==0.24.7
+sentencepiece==0.2.0
+protobuf==4.25.3
+safetensors==0.4.5
+psutil==5.9.8
+packaging==24.1
+setuptools==69.5.1
+wheel==0.44.0
+ninja==1.11.1.1
+fast-hadamard-transform @ https://github.com/Dao-AILab/fast-hadamard-transform/releases/download/v1.0.4.post1/fast_hadamard_transform-1.0.4.post1%2Bcu122torch2.2cxx11abiFALSE-cp310-cp310-linux_x86_64.whl

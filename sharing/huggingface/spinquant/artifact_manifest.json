@@ -1,0 +1,17 @@
+{
+  "condition": "SpinQuant W4A4KV4",
+  "base_model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "checkpoint_bytes_unchanged": true,
+  "artifact_format": "spinquant_qmodel_state",
+  "code_repository": "https://github.com/Will65536/safety-repair-of-quantized-agent",
+  "files": {
+    "qmodel.pt": {
+      "bytes": 16072578047,
+      "sha256": "22f81827a8e2fe6a708eae28e78a93acaf14a844a031b89da8904d58f7bb3b7c"
+    },
+    "R.bin": {
+      "bytes": 69214550,
+      "sha256": "1abb326819d9486fbbb6fbfb85eb5374540c789a84931c729f16402929d22807"
+    }
+  }
+}

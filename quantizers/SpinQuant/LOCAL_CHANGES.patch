@@ -1,0 +1,16 @@
+diff --git a/utils/process_args.py b/utils/process_args.py
+index ecf4839..d212f2a 100644
+--- a/utils/process_args.py
++++ b/utils/process_args.py
+@@ -242,6 +242,11 @@ def parser_gen():
+         "--layer_idx", type=int, default=10, help="Which decoder layer to capture"
+     )
+ 
++    parser.add_argument("--init_rotation_path", type=str, default=None)
++    parser.add_argument("--caq_cache_dir", type=str, default=None)
++    parser.add_argument("--caq_alpha", type=float, default=0.75)
++    parser.add_argument("--caq_beta", type=float, default=0.05)
++
+     args, unknown = parser.parse_known_args()
+ 
+     # assert (

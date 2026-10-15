@@ -1,0 +1,132 @@
+{
+  "selection": "Explicit allowlist of completed aggregate metric files only; original run paths and exact hashes retained. No per-example outputs or prompts.",
+  "snapshot_date": "2026-10-15",
+  "files": [
+    {
+      "source": "outputs/general/llama3_8b_instruct_bf16/full-run1/lm_eval_4task/metrics.json",
+      "published": "results/2026-10-15/general/llama3_8b_instruct_bf16/full-run1/lm_eval_4task/metrics.json",
+      "sha256": "e40b44f91a78f977b2d2b42168271d7f06d1b12c058576af56bc582294ba58a2",
+      "bytes": 1019
+    },
+    {
+      "source": "outputs/general/llama3_8b_instruct_spinquant_w4a4kv4/full-run1/lm_eval_4task/metrics.json",
+      "published": "results/2026-10-15/general/llama3_8b_instruct_spinquant_w4a4kv4/full-run1/lm_eval_4task/metrics.json",
+      "sha256": "df51affe5a536792e4bafc001508d2c1253dd5c19116c4cdf45b2733e80c9eaa",
+      "bytes": 1021
+    },
+    {
+      "source": "outputs/general/llama3_8b_instruct_bf16/full-run1/wikitext2/metrics.json",
+      "published": "results/2026-10-15/general/llama3_8b_instruct_bf16/full-run1/wikitext2/metrics.json",
+      "sha256": "d62664f39b40005e2a6969ee35603961dcbe2363dc232c3fe311ad65e91f2b3c",
+      "bytes": 451
+    },
+    {
+      "source": "outputs/general/llama3_8b_instruct_spinquant_w4a4kv4/full-run1/wikitext2/metrics.json",
+      "published": "results/2026-10-15/general/llama3_8b_instruct_spinquant_w4a4kv4/full-run1/wikitext2/metrics.json",
+      "sha256": "764f8b425ab61ec9e9c5ac57f5ad763e0b042f07a7d40eb32ad8361fc7c4fc28",
+      "bytes": 452
+    },
+    {
+      "source": "outputs/flatquant/general/full-run1/general_4task/metrics.json",
+      "published": "results/2026-10-15/flatquant/general/full-run1/general_4task/metrics.json",
+      "sha256": "b43b802c2105801a288455b643c3492f2249b9f7c01629640cb0d119bf71002d",
+      "bytes": 1019
+    },
+    {
+      "source": "outputs/flatquant/scoring/full-run1/wikitext2/metrics.json",
+      "published": "results/2026-10-15/flatquant/scoring/full-run1/wikitext2/metrics.json",
+      "sha256": "c11512865b2f0554274393578d1243ebb3fc809c3d30abe4dc3d583d61f425db",
+      "bytes": 451
+    },
+    {
+      "source": "outputs/flatquant/finguard/full-bs4-run1/finguard/metrics.json",
+      "published": "results/2026-10-15/flatquant/finguard/full-bs4-run1/finguard/metrics.json",
+      "sha256": "7d10a92a8a640e369a5edb30e750e2a7e210e51aaca45cc63475955dea18de26",
+      "bytes": 11988
+    },
+    {
+      "source": "outputs/flatquant/wildguard/full-bs2-run1/wildguard/metrics.json",
+      "published": "results/2026-10-15/flatquant/wildguard/full-bs2-run1/wildguard/metrics.json",
+      "sha256": "69dfee026769772160392e253f891e3b5f872eaaf84a51067e273a2455be3c19",
+      "bytes": 8860
+    },
+    {
+      "source": "outputs/finguard/llama3_8b_instruct_spinquant_w4a4kv4/full-21877954/metrics.json",
+      "published": "results/2026-10-15/finguard/llama3_8b_instruct_spinquant_w4a4kv4/full-21877954/metrics.json",
+      "sha256": "e9d2d78d15ed89509a5071fe6d24bec4768fdcf83bd435321412d609631581f3",
+      "bytes": 12255
+    },
+    {
+      "source": "outputs/wildguard/llama3_8b_instruct_spinquant_w4a4kv4/full-run1/metrics.json",
+      "published": "results/2026-10-15/wildguard/llama3_8b_instruct_spinquant_w4a4kv4/full-run1/metrics.json",
+      "sha256": "7c48ba88cc418e0d196ea4a8dba774e125b91547ce30c0a25fa44154907227b6",
+      "bytes": 9259
+    },
+    {
+      "source": "outputs/finguard/llama3_8b_instruct_bf16/full-21877954/metrics.json",
+      "published": "results/2026-10-15/finguard/llama3_8b_instruct_bf16/full-21877954/metrics.json",
+      "sha256": "bcade604880f4ae9619091719412fc4d38abc9e07e2ba95de6c68031ac34fb01",
+      "bytes": 11794
+    },
+    {
+      "source": "outputs/wildguard/llama3_8b_instruct_bf16/full-run1/metrics.json",
+      "published": "results/2026-10-15/wildguard/llama3_8b_instruct_bf16/full-run1/metrics.json",
+      "sha256": "8194ee63010a4271dcc0db0a3febb1c6ab80794a1c97a228bade54efb07eaec2",
+      "bytes": 9307
+    },
+    {
+      "source": "outputs/flatquant/harmbench/full-run1/harmbench/judgments/official-run1/metrics.json",
+      "published": "results/2026-10-15/flatquant/harmbench/full-run1/harmbench/judgments/official-run1/metrics.json",
+      "sha256": "c639bda7c1bf938521228a2b256e9600d27a3f0a6ae06f289b07d935adf33a37",
+      "bytes": 54
+    },
+    {
+      "source": "outputs/behavioral/harmbench_directrequest/spinquant/cached-256-full-run1/judgments/official-run1/metrics.json",
+      "published": "results/2026-10-15/behavioral/harmbench_directrequest/spinquant/cached-256-full-run1/judgments/official-run1/metrics.json",
+      "sha256": "1b2300a871f1891aa89d253f67400fe18421f2ec2bad5acf1d2abd8de5606dd4",
+      "bytes": 54
+    },
+    {
+      "source": "outputs/behavioral/harmbench_directrequest/bf16/cached-256-full-run1/judgments/official-run1/metrics.json",
+      "published": "results/2026-10-15/behavioral/harmbench_directrequest/bf16/cached-256-full-run1/judgments/official-run1/metrics.json",
+      "sha256": "375cc9a4f330df1377ccfbff8315b506c2e73592ea82d990ee5cc419781178a7",
+      "bytes": 55
+    },
+    {
+      "source": "outputs/flatquant/strongreject/full-run1/strongreject/judgments/rubric-run1/metrics.json",
+      "published": "results/2026-10-15/flatquant/strongreject/full-run1/strongreject/judgments/rubric-run1/metrics.json",
+      "sha256": "83dc29edd72ad3aa45ffee67d35cd45201cb95315635a4a56b044e804a4559d6",
+      "bytes": 63
+    },
+    {
+      "source": "outputs/behavioral/strongreject/spinquant/cached-256-full-run1/judgments/rubric-run1/metrics.json",
+      "published": "results/2026-10-15/behavioral/strongreject/spinquant/cached-256-full-run1/judgments/rubric-run1/metrics.json",
+      "sha256": "25a125d329c6f493942ecf46a458d493a1aac26fe902b598e3a769635879b867",
+      "bytes": 64
+    },
+    {
+      "source": "outputs/behavioral/strongreject/bf16/cached-256-full-run1/judgments/rubric-run1/metrics.json",
+      "published": "results/2026-10-15/behavioral/strongreject/bf16/cached-256-full-run1/judgments/rubric-run1/metrics.json",
+      "sha256": "ec11420efef5f1a9f2c7bc98ef2a5a4b858e6dcc6377e9f57e8b05ac6cc28dd5",
+      "bytes": 63
+    },
+    {
+      "source": "outputs/behavioral/advbench_directrequest/bf16/full-bs4-run1/judgments/strmatch/metrics.json",
+      "published": "results/2026-10-15/behavioral/advbench_directrequest/bf16/full-bs4-run1/judgments/strmatch/metrics.json",
+      "sha256": "2cfc7e1a94c61664f1b21a70a2a4747e3814aca8dfde16dda93aa3021e94bf37",
+      "bytes": 289
+    },
+    {
+      "source": "outputs/behavioral/advbench_directrequest/flatquant/full-bs4-run1/judgments/strmatch/metrics.json",
+      "published": "results/2026-10-15/behavioral/advbench_directrequest/flatquant/full-bs4-run1/judgments/strmatch/metrics.json",
+      "sha256": "82054030331cd169095dd3571642a5691d4d91379eea69d1a5014b226940b3b8",
+      "bytes": 290
+    },
+    {
+      "source": "outputs/behavioral/advbench_directrequest/spinquant/full-bs4-run1/judgments/strmatch/metrics.json",
+      "published": "results/2026-10-15/behavioral/advbench_directrequest/spinquant/full-bs4-run1/judgments/strmatch/metrics.json",
+      "sha256": "87d93038c860be2817405b29b2722896f0ac3c97cee097f636c4d98ea070f09e",
+      "bytes": 289
+    }
+  ]
+}

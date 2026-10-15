@@ -1,0 +1,17 @@
+id: advbench_directrequest
+loader: behavioral_generation
+dataset:
+  repository: llm-attacks/llm-attacks
+  file: data/advbench/harmful_behaviors.csv
+  revision: 098262edf85f807224e70ecd87b9d83716bf6b73
+  sha256: 6cd1a5c63c07610d7eb67307772ee5606017ee950b5770ab288a2c487489d3e1
+  expected_selected_rows: 520
+  split: harmful_behaviors
+  selection: all
+  method: DirectRequest
+protocol:
+  version: behavioral_greedy_cached_256_v1
+  max_new_tokens: 256
+  do_sample: false
+  use_cache: true
+  messages: user_only_native_chat_template

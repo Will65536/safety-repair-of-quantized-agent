@@ -1,0 +1,15 @@
+id: strongreject_small
+loader: behavioral_generation
+dataset:
+  repository: alexandrasouly/strongreject
+  file: strongreject_dataset/strongreject_small_dataset.csv
+  revision: f7cad6c17e624e21d8df2278e918ae1dddb4cb56
+  sha256: 3051340e3e89a3598d764dde497d5fcda80e258ac05cc35e6bd87228ac3d467c
+  selection: all_60
+  method: none
+protocol:
+  version: behavioral_greedy_cached_256_v1
+  max_new_tokens: 256
+  do_sample: false
+  use_cache: true
+  messages: user_only_native_chat_template

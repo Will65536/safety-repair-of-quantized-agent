@@ -1,0 +1,191 @@
+{
+  "model_id": "Hyun9junn/Meta-Llama-3-8B-Instruct-W4A4KV4-FlatQuant",
+  "revision": "65380056097d262d882e427359c9c8be2d63abf7",
+  "directory": "/work/nvme/bgxm/wliu12/models/safe-quant/llama-3-8b-instruct/flatquant-w4a4kv4",
+  "files": {
+    "README.md": {
+      "bytes": 1948,
+      "sha256": "261d2131c269bb49fe8fb1c325c798b55689ada3866dda5d226511b1c1e2d752"
+    },
+    "config.json": {
+      "bytes": 2574,
+      "sha256": "9113926b9199ee2419ca28c7c48b8ed5962c460ee97ca2d14d57cff248a99068"
+    },
+    "deploy/__init__.py": {
+      "bytes": 2212,
+      "sha256": "fe15cd87e073be9cb9e5e9891720b48541bb4f079e519542090f87fbe9fd088b"
+    },
+    "deploy/functional/__init__.py": {
+      "bytes": 153,
+      "sha256": "2ff168f9995bb3b740636422a335d6a09b2a29924058aa08f4247645c904554c"
+    },
+    "deploy/functional/online_trans.py": {
+      "bytes": 427630,
+      "sha256": "7a7f4d8ae4ab4ac5d055fedd87adf1160e545010ea0cfd32361d6dde43a7805d"
+    },
+    "deploy/functional/quantization.py": {
+      "bytes": 2071,
+      "sha256": "9a842ee7070e3fdecb239d7ba638da9b2422e6f252d6ae0b4c9d2911897e73ef"
+    },
+    "deploy/kernels/bindings.cpp": {
+      "bytes": 16725,
+      "sha256": "9c1ecbe5fe80327aa81d7b896b70230a6ba7ef38edcb5c95f0b102b7f9d7488f"
+    },
+    "deploy/kernels/block_matmul.py": {
+      "bytes": 11983,
+      "sha256": "527c7e1ab8ca0cfa8d5a26761c347bbc99cf4bd0f52a677d0238b6c38b5aa5f5"
+    },
+    "deploy/kernels/flashinfer.cu": {
+      "bytes": 10673,
+      "sha256": "3189be8da9c232fa6e2663cb3a6c40efcc6fd53d597cc8e235944db948dfae27"
+    },
+    "deploy/kernels/gemm.cu": {
+      "bytes": 1573,
+      "sha256": "a351529098342c4e92d2a773ea33a08436e03b4bffb5efdd84b7542d95d7eabd"
+    },
+    "deploy/kernels/include/common.h": {
+      "bytes": 1159,
+      "sha256": "7698f99d691fc342353b86896e36ed3efe7bb1fd2332d887f55fe9dd6b7ee91d"
+    },
+    "deploy/kernels/include/flashinfer/cp_async.cuh": {
+      "bytes": 3301,
+      "sha256": "77cb840944b97135160da7a35314f6740684735ad988057559dec0061ca00d51"
+    },
+    "deploy/kernels/include/flashinfer/decode.cuh": {
+      "bytes": 35410,
+      "sha256": "91e79143026e1d45e85ddbaff4354c364cc5d6c0baf68333450587bb536d585e"
+    },
+    "deploy/kernels/include/flashinfer/layout.cuh": {
+      "bytes": 2140,
+      "sha256": "4135828e6fdf0879e2ac67592f98c08109ae7de3e7acc87bb45de02aa7df2b94"
+    },
+    "deploy/kernels/include/flashinfer/math.cuh": {
+      "bytes": 639,
+      "sha256": "a0c6e60102fa8601153e8d15d45c6db56fbb76f931bb01bbfe02b6d4a0251042"
+    },
+    "deploy/kernels/include/flashinfer/mma.cuh": {
+      "bytes": 3355,
+      "sha256": "b978041ba9a207d9e8500cc1b56c8ec76bac857bb823239e84699756d009ad46"
+    },
+    "deploy/kernels/include/flashinfer/page.cuh": {
+      "bytes": 11094,
+      "sha256": "d9eaf161158e645b02894ba950aeabbfc572755551220a60e9f4d661e41fbcd6"
+    },
+    "deploy/kernels/include/flashinfer/permuted_smem.cuh": {
+      "bytes": 4660,
+      "sha256": "fadff9182d5922be9314edc3af8da7a77dfc844af0735a4abaf8a63b11c0c582"
+    },
+    "deploy/kernels/include/flashinfer/prefill.cuh": {
+      "bytes": 16548,
+      "sha256": "22a6cd858792dd6d4b5ceed9d3e52b2665be086833db1b03028319ced3a96654"
+    },
+    "deploy/kernels/include/flashinfer/quantization.cuh": {
+      "bytes": 3130,
+      "sha256": "7fd7a53e6cdcfb77d418073005de5af3501d407d21b4475fa845cce1b2df38c7"
+    },
+    "deploy/kernels/include/flashinfer/rope.cuh": {
+      "bytes": 733,
+      "sha256": "22722b1ea0f8b56026bcdebd66650abbad562fedad90a80975c564c5e8ae50f8"
+    },
+    "deploy/kernels/include/flashinfer/state.cuh": {
+      "bytes": 3228,
+      "sha256": "51660b86ebe77f8a9dbdb17f57fca81ecff4ba19177e6ce43700eaa829f9648f"
+    },
+    "deploy/kernels/include/flashinfer/utils.cuh": {
+      "bytes": 4506,
+      "sha256": "ca7c952ea92c5816b16dcf16c9af448405ab322767f8634da55471c26367a72d"
+    },
+    "deploy/kernels/include/flashinfer/vec_dtypes.cuh": {
+      "bytes": 44919,
+      "sha256": "f55146f8426b0cf36dfe8d9004dbd259c07217fdd88fe668a0bd13021d233694"
+    },
+    "deploy/kernels/include/flashinfer.h": {
+      "bytes": 2998,
+      "sha256": "941e854dbe6634acd52e649627a2589d9abb15b1e337267f7a469cd339b23804"
+    },
+    "deploy/kernels/include/gemm.h": {
+      "bytes": 195,
+      "sha256": "790e7cd9ddeb92752f959604c44957d36c7539be509aa1fd843beaaa2dac9bdc"
+    },
+    "deploy/kernels/include/int4.h": {
+      "bytes": 7312,
+      "sha256": "02a8334f25a18eade476fe740520edd510c562f9a4c60c42bcd26e7f4cc7b22d"
+    },
+    "deploy/kernels/include/quant.h": {
+      "bytes": 385,
+      "sha256": "9826d20b9a058a03cecd98fbafb437c632f42892005e228d6efd4d836eb576e0"
+    },
+    "deploy/kernels/include/util.h": {
+      "bytes": 3085,
+      "sha256": "601a9ae7170643658a0ee7f4ed760e69413de22348561798f6df516d2dc8f400"
+    },
+    "deploy/kernels/kron_matmul.py": {
+      "bytes": 10472,
+      "sha256": "34d2289c5594917a6157bc46713c54ecb0a741843a4547befbec86ed4df3569e"
+    },
+    "deploy/kernels/quant.cu": {
+      "bytes": 2760,
+      "sha256": "4ba64710a534cf5eef694ea180c9e80da0cc81ddd4bf0614a791ab53966a3583"
+    },
+    "deploy/nn/__init__.py": {
+      "bytes": 140,
+      "sha256": "f7aa2a939239d6394aafbdd40ed472c05c887299c179702f7987aca70ddb11ae"
+    },
+    "deploy/nn/linear.py": {
+      "bytes": 3454,
+      "sha256": "0270580842844a539252fbde225dc20ac77013bbda48cd46560d49a6cb3d535a"
+    },
+    "deploy/nn/normalization.py": {
+      "bytes": 743,
+      "sha256": "6aee530e033f7b9f76af7d5733551baf9f2982a92ccde05471dda52a315c911f"
+    },
+    "deploy/nn/online_trans.py": {
+      "bytes": 2924,
+      "sha256": "d19bee19c9f89e86f1512b756dc18d7685ae6c7462473359f94cf84d9fdb00ca"
+    },
+    "deploy/nn/quantization.py": {
+      "bytes": 1476,
+      "sha256": "65a04e9842a3d01b7b38d7401f66bfcc93d88cd1539fe60a961cae07a3d96ec1"
+    },
+    "deploy/transformers/__init__.py": {
+      "bytes": 65,
+      "sha256": "bc35d8901f4b460d40b0f621269b67f011b297cf173d7f12dcc8eecd8ba034d6"
+    },
+    "deploy/transformers/kv_cache.py": {
+      "bytes": 17700,
+      "sha256": "f425438b9ec8b15cd5157772b3356605b87b7f81eef75e4e8b6ed49d62d63da8"
+    },
+    "deploy/transformers/modeling_llama.py": {
+      "bytes": 25211,
+      "sha256": "c04f04028af967c092d74d6e8f5881b3acde6e5fb0fbe03150dbb13ad2a02558"
+    },
+    "model-00001-of-00002.safetensors": {
+      "bytes": 4558186984,
+      "sha256": "b1747983fff297bdb8d51181a10c581eb37a7f8b9a48c6111ba5bf44936f333d"
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 1061763872,
+      "sha256": "8a36efc131ec8719c68d4c28fd56d3fd98baa779ad9fb70fb807548cdba905c9"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 252936,
+      "sha256": "a47a0881f5f545b4cdcd18f65e2f1a6be7a49b7e209b730fa6cef3419782c7e6"
+    },
+    "modeling_llama.py": {
+      "bytes": 25211,
+      "sha256": "c04f04028af967c092d74d6e8f5881b3acde6e5fb0fbe03150dbb13ad2a02558"
+    },
+    "special_tokens_map.json": {
+      "bytes": 296,
+      "sha256": "6f38c73729248f6c127296386e3cdde96e254636cc58b4169d3fd32328d9a8ec"
+    },
+    "tokenizer.json": {
+      "bytes": 17209961,
+      "sha256": "3c5cf44023714fb39b05e71e425f8d7b92805ff73f7988b083b8c87f0bf87393"
+    },
+    "tokenizer_config.json": {
+      "bytes": 50977,
+      "sha256": "da0e3a7cce6e4d787e85eb1c24d548420e0d7fe2c7a214e192795c46e40d75bb"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "perplexity": 8.286559587872834,
+  "mean_negative_log_likelihood": 2.1146348755135302,
+  "negative_log_likelihood_sum": 610340.7202148438,
+  "num_predicted_tokens": 288627,
+  "num_evaluated_blocks": 141,
+  "num_available_complete_blocks": 141,
+  "total_corpus_tokens": 289077,
+  "num_dropped_tail_tokens": 309,
+  "is_full_evaluation": true,
+  "runtime": {
+    "elapsed_seconds": 56.82801721687429,
+    "blocks_per_second": 2.481170501900461
+  }
+}

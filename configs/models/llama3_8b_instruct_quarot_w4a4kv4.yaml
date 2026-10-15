@@ -1,0 +1,18 @@
+id: llama3_8b_instruct_quarot_w4a4kv4
+family: llama3
+loader: quarot_saved_state
+artifact_format: quarot_qmodel_state
+model_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/bf16
+tokenizer_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/bf16
+local_files_only: true
+torch_dtype: bfloat16
+attention_implementation: sdpa
+precision: {weights: 4, activations: 4, kv_cache: 4}
+quarot:
+  source_root: /work/nvme/bgxm/wliu12/repos/QuaRot
+  artifact_path: ${SAFE_QUANT_MODEL_ROOT}/llama-3-8b-instruct/quarot-w4a4kv4/paperstyle-22914989-20261015T081845171928Z
+  checkpoint_sha256: fa0c5ce028544bed329941ef91f44b586a7bf0ad6ad003313055a7f27808cd42
+  recipe: paper-style
+  storage: native_fake_quantized_BF16_not_packed_INT4
+  upstream_rmsnorm: unchanged
+  validation_status: pending_user_run_fresh_process_gpu_check

@@ -1,0 +1,29 @@
+id: general_4task_zero_shot
+loader: lm_eval_harness
+
+dataset:
+  implementation: lm-evaluation-harness
+
+protocol:
+  version: general_4task_lm_eval_v1
+  harness_version: 0.4.8
+  tasks:
+    - arc_easy
+    - arc_challenge
+    - piqa
+    - winogrande
+  num_fewshot: 0
+  apply_chat_template: false
+  fewshot_as_multiturn: false
+  max_length: 2048
+  add_bos_token: false
+  logits_cache: true
+  batch_size: 8
+  bootstrap_iters: 0
+  random_seed: 0
+  numpy_random_seed: 1234
+  torch_random_seed: 1234
+  fewshot_random_seed: 1234
+  confirm_run_unsafe_code: true
+  primary_metric: acc
+  aggregate: unweighted_mean_of_four_task_accuracies

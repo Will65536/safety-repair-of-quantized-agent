@@ -1,0 +1,19 @@
+id: wikitext2_perplexity
+loader: wikitext2_perplexity
+dataset:
+  path: Salesforce/wikitext
+  name: wikitext-2-raw-v1
+  revision: b08601e04326c79dfdd32d625aee71d232d685c3
+  split: test
+  text_field: text
+  join_separator: "\n\n"
+protocol:
+  version: wikitext2_contiguous_2048_cached_v1
+  tokenizer_add_special_tokens: true
+  sequence_length: 2048
+  stride: 2048
+  drop_final_incomplete_sequence: true
+  predicted_tokens_per_sequence: 2047
+  batch_size: 1
+  use_cache: true
+  metric: token_perplexity
