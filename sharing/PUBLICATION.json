@@ -1,0 +1,43 @@
+{
+  "scope": "Verified public HF publication receipts and local source-snapshot identity. GitHub push is verified separately.",
+  "github_destination": "https://github.com/Will65536/safety-repair-of-quantized-agent",
+  "local_source_snapshot_commit": "faf0b97366e387e11fa8d8a6b805318576110ec8",
+  "hf": {
+    "spinquant": {
+      "repo_id": "wliu62/Llama-3-8B-Instruct-SpinQuant-W4A4KV4",
+      "url": "https://huggingface.co/wliu62/Llama-3-8B-Instruct-SpinQuant-W4A4KV4",
+      "revision": "bcd12ad54d175106b359c4bc9c8e3b23d736aa80",
+      "public": true,
+      "verified_files": 8,
+      "checkpoint_bytes_unchanged": true,
+      "verification": "Remote LFS SHA256/size for large files; pinned-revision download SHA256 for other files."
+    },
+    "flatquant": {
+      "repo_id": "wliu62/Llama-3-8B-Instruct-FlatQuant-W4A4KV4",
+      "url": "https://huggingface.co/wliu62/Llama-3-8B-Instruct-FlatQuant-W4A4KV4",
+      "revision": "8bbd40bcda79f2bb0c2864f4b94509604f30e27e",
+      "public": true,
+      "verified_files": 52,
+      "checkpoint_bytes_unchanged": true,
+      "verification": "Remote LFS SHA256/size for large files; pinned-revision download SHA256 for other files."
+    },
+    "quarot": {
+      "repo_id": "wliu62/Llama-3-8B-Instruct-QuaRot-W4A4KV4",
+      "url": "https://huggingface.co/wliu62/Llama-3-8B-Instruct-QuaRot-W4A4KV4",
+      "revision": "4f81b87fc399027c3fdb8911486065b8767ab266",
+      "public": true,
+      "verified_files": 17,
+      "checkpoint_bytes_unchanged": true,
+      "verification": "Remote LFS SHA256/size for large files; pinned-revision download SHA256 for other files."
+    }
+  },
+  "bf16_base_revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+  "validation": {
+    "cpu_unit_tests_passed": 160,
+    "staged_source_credential_patterns": "none found",
+    "model_artifacts_in_git": "none",
+    "selected_aggregate_metric_files": 21,
+    "quantized_checkpoint_bytes": "unchanged",
+    "gpu_inference_during_publication": false
+  }
+}

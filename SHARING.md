@@ -124,8 +124,11 @@ native fake-quantized artifacts as standalone Hugging Face packed models.
 1. Install separate compatible environments; do not combine the three quantizer
    dependency sets. Upload tools should also be isolated from inference envs.
 2. Obtain the exact BF16 base model/tokenizer, or download the official base
-   revision and verify it matches the producing files. None of the three student
-   uploads alone supplies a complete BF16 teacher.
+   revision `8afb486c1db24fe5011ec46dfbe5b5dccdb575c2`. All ten producing
+   local files matched this official revision's metadata; independent SHA256
+   hashes are in `sharing/base_model_manifest.json`. None of the three student
+   uploads alone supplies a complete BF16 teacher. Exact download commands are
+   in `docs/CHECKPOINT_DOWNLOADS.md`.
 3. Set `SAFE_QUANT_MODEL_ROOT` and place downloaded artifacts in the directory
    layout expected by `configs/models/`. Record the final remote commit hashes.
 4. Adapt only filesystem paths and runtime build locations. Existing Delta paths

@@ -1,0 +1,48 @@
+{
+  "model_id": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "purpose": "Exact local BF16 teacher/base identity for the shared student artifacts. No BF16 weights are uploaded to GitHub or the three student model repositories.",
+  "official_revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+  "files": {
+    "config.json": {
+      "bytes": 654,
+      "sha256": "61f3de03a16ca8046b05dc777bce72717022bc8522152eee61a69072272ef54b"
+    },
+    "generation_config.json": {
+      "bytes": 187,
+      "sha256": "d1af74d8ba49428ab2faa65f7948165cc6bf52b740e57e840f8af772587c894c"
+    },
+    "model-00001-of-00004.safetensors": {
+      "bytes": 4976698672,
+      "sha256": "d8cf9c4d0dd972e1a2131bfe656235ee98221679711a3beef6d46dadf0f20b5c"
+    },
+    "model-00002-of-00004.safetensors": {
+      "bytes": 4999802720,
+      "sha256": "8d4782b4a69ef03845159ce1a15e272aadaaf134dc138d68f616098e8531729c"
+    },
+    "model-00003-of-00004.safetensors": {
+      "bytes": 4915916176,
+      "sha256": "3acdd690e65c24f42a24581b8467af98bd3ca357444580f8012aacd2bd607921"
+    },
+    "model-00004-of-00004.safetensors": {
+      "bytes": 1168138808,
+      "sha256": "67e9ad31c8c32abf3a55ee7fc7217b3ecb35fd3c74d98a5bd233e0e4d6964f46"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 23950,
+      "sha256": "146776fce3f6db1103aa6f249e65ee5544c5923ce6f971b092eee79aa6e5d37b"
+    },
+    "special_tokens_map.json": {
+      "bytes": 73,
+      "sha256": "462d91939dbc37178aa5a3eae7068d1990ccc92e09f288cc71f42cdf139d69cc"
+    },
+    "tokenizer.json": {
+      "bytes": 9085698,
+      "sha256": "e134af98b985517b4f068e3755ae90d4e9cd2d45d328325dc503f1c6b2d06cc7"
+    },
+    "tokenizer_config.json": {
+      "bytes": 50977,
+      "sha256": "da0e3a7cce6e4d787e85eb1c24d548420e0d7fe2c7a214e192795c46e40d75bb"
+    }
+  },
+  "official_revision_verification": "All ten local files matched official pinned-revision metadata: SHA256/size for LFS, Git blob SHA1/size for other files."
+}

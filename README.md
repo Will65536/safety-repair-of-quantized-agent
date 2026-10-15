@@ -18,6 +18,19 @@ Separate environments and some filesystem-path adaptation are still required.
 Archiving quantizer source here does not run quantization inside the evaluation
 workflow; checkpoint preparation and any future repair outputs remain separate.
 
+### Published baseline checkpoints
+
+| Condition | Public HF artifact |
+| --- | --- |
+| SpinQuant W4A4KV4 | [Native saved state](https://huggingface.co/wliu62/Llama-3-8B-Instruct-SpinQuant-W4A4KV4) |
+| FlatQuant W4A4KV4 | [Attributed mirror of the published packed checkpoint](https://huggingface.co/wliu62/Llama-3-8B-Instruct-FlatQuant-W4A4KV4) |
+| QuaRot W4A4KV4 | [Completed paper-style native saved state](https://huggingface.co/wliu62/Llama-3-8B-Instruct-QuaRot-W4A4KV4) |
+
+Use the [pinned download instructions](docs/CHECKPOINT_DOWNLOADS.md) and
+[verified upload receipts](sharing/PUBLICATION.json). The exact official BF16
+teacher/base revision is identified there; BF16 weights are not in GitHub or
+the student uploads. Model downloads alone do not supply a validated trainer.
+
 `safe-quant` studies safety classification and model safety behavior under aggressive LLM quantization.
 
 Current model: **Llama-3-8B-Instruct**. Active evaluation conditions are BF16,
